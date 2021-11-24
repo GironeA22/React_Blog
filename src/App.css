@@ -28,16 +28,33 @@ body {
   margin-top: -15%;
   height: 80vh;
   width: 80vw;
-  background-color: turquoise;
-}
-
-.bg-link {
-  width: 5%;
-  background-color: blueviolet;
-}
-
-.inactiveLink {
   background-color: aliceblue;
+  text-align: center;
+}
+
+.avatars {
+  margin-top: 10%;
+  margin-left: 12%;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  outline: 5px;
+  outline-style: ridge;
+  outline-color: burlywood;
+  margin: 5%;
+}
+
+.Popuptext {
+  position: relative !important;
+  background-color: aliceblue !important;
+  border: 0px !important;
+  display: inline-table !important;
+  padding-right: 10%;
+  padding-top: 3%;
+}
+
+.popover-arrow::before, .popover-arrow::after {
+  content: none !important;
 }
 
 footer {
@@ -45,4 +62,3 @@ footer {
   text-align: center;
   top: 100%;
 }
-

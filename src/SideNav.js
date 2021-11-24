@@ -3,9 +3,9 @@ import { Nav } from 'react-bootstrap';
 const SideNav = () => {
   return (
     <Nav defaultActiveKey="/" className="flex-column">
-      <Nav.Link href="/" className='bg-link link-dark'>Home</Nav.Link>
-      <Nav.Link href="/Torgue" className='link-success'>Link</Nav.Link>
-      <Nav.Link eventKey="link-2">Link</Nav.Link>
+      <Nav.Link href="/" className='link-info'>Home</Nav.Link>
+      <Nav.Link href="/Contact-Us" className='link-info'>Contact Us</Nav.Link>
+      <Nav.Link href='/Authors' className='link-info'>Authors</Nav.Link>
     </Nav>
   )
 }

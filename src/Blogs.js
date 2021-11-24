@@ -1,6 +1,6 @@
 const Blogs = (props) => {
     return(
-        <div className='contentBody'>
+        <div>
             <img src={props.content.introImg} alt=''/>
             <h4>{props.content.content}</h4>
         </div>

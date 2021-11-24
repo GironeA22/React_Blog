@@ -32,8 +32,6 @@ function App() {
       {/* sending a ton of stuff, simplify? */}
       <Admin updateBlog={setBlogData} blogData={blogData} setShow={setShow} show={show} />
       <BlogContent />
-
-
     </>
   )
 }
