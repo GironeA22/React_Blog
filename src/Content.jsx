@@ -14,7 +14,6 @@ const Content = [
         name: 'Anthony Girone',
         avatar: Me,
         bio: '',
-        id: 0,
     },
     {
         name: 'Mr. Torgue (Mister Torgue High-Five Flexington)',

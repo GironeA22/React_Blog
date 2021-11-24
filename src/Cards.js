@@ -3,9 +3,11 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Content from './Content.jsx';
 
 const CharCards = () => {
-        return (
-            <CardGroup>
-                {Content.map((character, i) => (
+    return (
+        <CardGroup>
+            {Content.map((character, i) => {
+                if (i !== 0) {
+                return (   
                 <Card className="bg-dark text-white cardStyle" style={{ width: '18rem', height: 'fit-content' }} key={i}>
                     <Card.Img variant="top" src={character.img} />
                     <Card.Body>
@@ -16,10 +18,10 @@ const CharCards = () => {
                         <a href={character.path} class="stretched-link"></a>
                     </Card.Body>
                 </Card>
-                ))
+            )}})
                 }
-            </CardGroup>
-        )
-    }
+        </CardGroup>
+    )
+}
 
 export default CharCards;
