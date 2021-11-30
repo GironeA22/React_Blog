@@ -8,8 +8,8 @@ const Contact = () => {
     const handleClose = () => setShow(false);
     return (
         <>
-            <input type='email' placeholder='Enter your email' />
-            <input type='text' placeholder='Enter your feedback' />
+            <input type='email' placeholder='Enter your email' className='input' />
+            <input type='text' placeholder='Enter your feedback' className='input' />
             <Button onClick={handleShow}>Submit</Button>
             <Modal setShow={setShow} show={show}>
                 <Modal.Header closeButton>

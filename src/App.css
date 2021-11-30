@@ -32,9 +32,16 @@ body {
   text-align: center;
 }
 
-.avatars {
+.input {
   margin-top: 10%;
-  margin-left: 12%;
+}
+
+.introImg {
+  width: 1200px;
+  height: 400px;
+}
+
+.avatars {
   border-radius: 50%;
   height: 200px;
   width: 200px;
@@ -49,7 +56,8 @@ body {
   background-color: aliceblue !important;
   border: 0px !important;
   display: inline-table !important;
-  padding-right: 10%;
+  padding-right: 5%;
+  padding-left: 5%;
   padding-top: 3%;
 }
 

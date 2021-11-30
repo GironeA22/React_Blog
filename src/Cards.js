@@ -1,8 +1,18 @@
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import CardGroup from 'react-bootstrap/CardGroup';
-import Content from './Content.jsx';
+// import Content from './Content.jsx';
+import {useSelector, useDispatch} from 'react-redux';
+import {selectContent, deleteContent} from './state/contentSlice';
 
 const CharCards = () => {
+    const dispatch = useDispatch();
+    const Content = useSelector(selectContent);
+    console.log(Content)
+
+    const deleteHandler = (index) => {
+        console.log(index)
+        dispatch(deleteContent(index))
+    }
     return (
         <CardGroup>
             {Content.map((character, i) => {
@@ -16,6 +26,7 @@ const CharCards = () => {
                             {character.descriptor}
                         </Card.Text>
                         <a href={character.path} class="stretched-link"></a>
+                        <Button variant='warning'onClick={() => deleteHandler(index)}>Delete</Button>
                     </Card.Body>
                 </Card>
             )}})
