@@ -12,8 +12,6 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button'
 
 function App() {
-  //Set default site content
-  const [content, setContent] = useState(Content) //set the initial state to the imported data file
   //Setting up the Modal
   const [show, setShow] = useState(false); //sets show to false, which keeps the Modal from loading
   const handleShow = () => setShow(true); //function to change show to true and load Modal
@@ -37,26 +35,19 @@ function App() {
             </Route>
           </div>
         </Route>
+
         <div className='contentBody'>
-          <Route path='/Torgue'>
-            <Blogs content={Content[1]} />
+          <Route path='/blog/:index'>
+            <Blogs />
           </Route>
-          <Route path='/Gaige'>
-            <Blogs content={Content[2]} />
-          </Route>
-          <Route path='/Moze'>
-            <Blogs content={Content[3]} />
-          </Route>
-          <Route path='/Contact-Us'>
-            <Contact />
-          </Route>
+
           <Route path='/Authors'>
             <Authors />
           </Route>
         </div>
       </Switch>
       <Button variant="secondary" onClick={handleShow}>Admin</Button>
-      <Admin content={content} updateContent={setContent} defaultContent={Content} setShow={setShow} show={show} />
+      <Admin defaultContent={Content} setShow={setShow} show={show} />
       <Footer />
     </>
   );
